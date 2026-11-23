@@ -1,0 +1,1084 @@
+{
+ "results": {
+  "depression": {
+   "original": {
+    "selected": [
+     "PCL-C_1_Memories",
+     "PCL-C_4_Upset",
+     "PCL-C_9_NoInterest",
+     "PCL-C_10_FeelDistant",
+     "PCL-C_13_Sleep",
+     "PCL-C_15_Concentration",
+     "age",
+     "re_experiencing",
+     "avoidance",
+     "cognition_mood",
+     "arousal_reactivity",
+     "mood_to_arousal_ratio",
+     "symptom_variance",
+     "total_pclc_score"
+    ],
+    "rfecv_curve": [
+     0.6527667984189723,
+     0.693833067517278,
+     0.6627272727272727,
+     0.6911525354889199,
+     0.6810155824343467,
+     0.7072463768115942,
+     0.7262939958592132,
+     0.7161001317523057,
+     0.736017316017316,
+     0.7396273291925465,
+     0.7535621662852783,
+     0.7106077213494093,
+     0.6950558213716109,
+     0.7862939958592132,
+     0.75311004784689,
+     0.7276905702992659,
+     0.7015372190065958,
+     0.7340350877192983,
+     0.7463157894736842,
+     0.7236395336166503,
+     0.7095041952707857,
+     0.7778195488721804,
+     0.7638901601830663,
+     0.7557666894509001,
+     0.7523112128146453,
+     0.7155693581780538
+    ],
+    "Logistic Regression": {
+     "cv_f1": 0.8935102628586366,
+     "params": {
+      "solver": "liblinear",
+      "penalty": "l2",
+      "class_weight": "balanced",
+      "C": 1438.4498882876599
+     }
+    },
+    "Random Forest": {
+     "cv_f1": 0.9131022421124448,
+     "params": {
+      "n_estimators": 50,
+      "min_samples_split": 10,
+      "min_samples_leaf": 1,
+      "max_depth": null,
+      "class_weight": null,
+      "bootstrap": false
+     }
+    },
+    "SVM": {
+     "cv_f1": 0.9542640814458198,
+     "params": {
+      "kernel": "rbf",
+      "gamma": 1.0,
+      "class_weight": "balanced",
+      "C": 1000.0
+     }
+    },
+    "Neural Network": {
+     "cv_f1": 0.8975337597725657,
+     "params": {
+      "solver": "adam",
+      "learning_rate_init": 0.01778279410038923,
+      "learning_rate": "constant",
+      "hidden_layer_sizes": [
+       100,
+       50
+      ],
+      "early_stopping": true,
+      "alpha": 0.004641588833612777,
+      "activation": "relu"
+     }
+    }
+   },
+   "corrected": {
+    "Logistic Regression": {
+     "cv_f1": 0.7454652014652015,
+     "params": {
+      "solver": "saga",
+      "penalty": "l2",
+      "class_weight": "balanced",
+      "C": 0.0002636650898730358
+     },
+     "selected": [
+      "PCL-C_1_Memories",
+      "PCL-C_4_Upset",
+      "PCL-C_9_NoInterest",
+      "PCL-C_10_FeelDistant",
+      "PCL-C_13_Sleep",
+      "PCL-C_15_Concentration",
+      "age",
+      "re_experiencing",
+      "avoidance",
+      "cognition_mood",
+      "arousal_reactivity",
+      "mood_to_arousal_ratio",
+      "symptom_variance",
+      "total_pclc_score"
+     ]
+    },
+    "Random Forest": {
+     "cv_f1": 0.7462232656740666,
+     "params": {
+      "n_estimators": 300,
+      "min_samples_split": 10,
+      "min_samples_leaf": 1,
+      "max_depth": null,
+      "class_weight": "balanced",
+      "bootstrap": false
+     },
+     "selected": [
+      "PCL-C_1_Memories",
+      "PCL-C_4_Upset",
+      "PCL-C_9_NoInterest",
+      "PCL-C_10_FeelDistant",
+      "PCL-C_13_Sleep",
+      "PCL-C_15_Concentration",
+      "age",
+      "re_experiencing",
+      "avoidance",
+      "cognition_mood",
+      "arousal_reactivity",
+      "mood_to_arousal_ratio",
+      "symptom_variance",
+      "total_pclc_score"
+     ]
+    },
+    "SVM": {
+     "cv_f1": 0.7478211443728685,
+     "params": {
+      "kernel": "rbf",
+      "gamma": 0.03162277660168379,
+      "class_weight": "balanced",
+      "C": 0.004641588833612777
+     },
+     "selected": [
+      "PCL-C_1_Memories",
+      "PCL-C_4_Upset",
+      "PCL-C_9_NoInterest",
+      "PCL-C_10_FeelDistant",
+      "PCL-C_13_Sleep",
+      "PCL-C_15_Concentration",
+      "age",
+      "re_experiencing",
+      "avoidance",
+      "cognition_mood",
+      "arousal_reactivity",
+      "mood_to_arousal_ratio",
+      "symptom_variance",
+      "total_pclc_score"
+     ]
+    },
+    "Neural Network": {
+     "cv_f1": 0.7583589743589745,
+     "params": {
+      "solver": "adam",
+      "learning_rate_init": 0.0031622776601683794,
+      "learning_rate": "constant",
+      "hidden_layer_sizes": [
+       50,
+       25
+      ],
+      "early_stopping": true,
+      "alpha": 9.999999999999999e-06,
+      "activation": "tanh"
+     },
+     "selected": [
+      "PCL-C_1_Memories",
+      "PCL-C_4_Upset",
+      "PCL-C_9_NoInterest",
+      "PCL-C_10_FeelDistant",
+      "PCL-C_13_Sleep",
+      "PCL-C_15_Concentration",
+      "age",
+      "re_experiencing",
+      "avoidance",
+      "cognition_mood",
+      "arousal_reactivity",
+      "mood_to_arousal_ratio",
+      "symptom_variance",
+      "total_pclc_score"
+     ]
+    }
+   },
+   "test_original": {
+    "Logistic Regression": {
+     "TN": 37,
+     "FP": 5,
+     "FN": 2,
+     "TP": 11,
+     "accuracy": 0.8727272727272727,
+     "acc_ci": [
+      0.7598297223798235,
+      0.9369578960698056
+     ],
+     "precision": 0.6875,
+     "prec_ci": [
+      0.4440435565274821,
+      0.858353562348491
+     ],
+     "recall": 0.8461538461538461,
+     "rec_ci": [
+      0.5776536874893673,
+      0.9567418220347709
+     ],
+     "f1": 0.7586206896551724,
+     "f1_ci": [
+      0.5384615384615384,
+      0.9090909090909091
+     ],
+     "auc": 0.9084249084249084,
+     "auc_ci": [
+      0.8118403777205474,
+      0.9777838827838826
+     ],
+     "spec": 0.8809523809523809,
+     "npv": 0.9487179487179487
+    },
+    "Random Forest": {
+     "TN": 37,
+     "FP": 5,
+     "FN": 1,
+     "TP": 12,
+     "accuracy": 0.8909090909090909,
+     "acc_ci": [
+      0.7817445080840346,
+      0.9490327502899663
+     ],
+     "precision": 0.7058823529411765,
+     "prec_ci": [
+      0.46866889751771845,
+      0.8672001047373057
+     ],
+     "recall": 0.9230769230769231,
+     "rec_ci": [
+      0.666860488286395,
+      0.986289578909774
+     ],
+     "f1": 0.8,
+     "f1_ci": [
+      0.6,
+      0.9375
+     ],
+     "auc": 0.9304029304029303,
+     "auc_ci": [
+      0.8546511627906976,
+      0.9860681114551083
+     ],
+     "spec": 0.8809523809523809,
+     "npv": 0.9736842105263158
+    },
+    "SVM": {
+     "TN": 40,
+     "FP": 2,
+     "FN": 9,
+     "TP": 4,
+     "accuracy": 0.8,
+     "acc_ci": [
+      0.6763512073441295,
+      0.884477851408011
+     ],
+     "precision": 0.6666666666666666,
+     "prec_ci": [
+      0.29999331299474324,
+      0.9032285897864654
+     ],
+     "recall": 0.3076923076923077,
+     "rec_ci": [
+      0.12680703567070326,
+      0.5763065701492199
+     ],
+     "f1": 0.42105263157894735,
+     "f1_ci": [
+      0.11764705882352941,
+      0.6666666666666666
+     ],
+     "auc": 0.8882783882783882,
+     "auc_ci": [
+      0.7912087912087912,
+      0.9622222222222222
+     ],
+     "spec": 0.9523809523809523,
+     "npv": 0.8163265306122449
+    },
+    "Neural Network": {
+     "TN": 34,
+     "FP": 8,
+     "FN": 3,
+     "TP": 10,
+     "accuracy": 0.8,
+     "acc_ci": [
+      0.6763512073441295,
+      0.884477851408011
+     ],
+     "precision": 0.5555555555555556,
+     "prec_ci": [
+      0.3371641549342691,
+      0.7544048199620327
+     ],
+     "recall": 0.7692307692307693,
+     "rec_ci": [
+      0.49743623839480355,
+      0.918204713457304
+     ],
+     "f1": 0.6451612903225806,
+     "f1_ci": [
+      0.41379310344827586,
+      0.8182400932400924
+     ],
+     "auc": 0.9010989010989011,
+     "auc_ci": [
+      0.8049969512195122,
+      0.9690090640431902
+     ],
+     "spec": 0.8095238095238095,
+     "npv": 0.918918918918919
+    }
+   },
+   "test_corrected": {
+    "Logistic Regression": {
+     "TN": 32,
+     "FP": 10,
+     "FN": 1,
+     "TP": 12,
+     "accuracy": 0.8,
+     "acc_ci": [
+      0.6763512073441295,
+      0.884477851408011
+     ],
+     "precision": 0.5454545454545454,
+     "prec_ci": [
+      0.34659795182499575,
+      0.7307970593927182
+     ],
+     "recall": 0.9230769230769231,
+     "rec_ci": [
+      0.666860488286395,
+      0.986289578909774
+     ],
+     "f1": 0.6857142857142857,
+     "f1_ci": [
+      0.4782091097308489,
+      0.8421052631578947
+     ],
+     "auc": 0.9322344322344323,
+     "auc_ci": [
+      0.8391472868217055,
+      0.9916666666666667
+     ],
+     "spec": 0.7619047619047619,
+     "npv": 0.9696969696969697
+    },
+    "Random Forest": {
+     "TN": 37,
+     "FP": 5,
+     "FN": 3,
+     "TP": 10,
+     "accuracy": 0.8545454545454545,
+     "acc_ci": [
+      0.7383908696159521,
+      0.9244071089093046
+     ],
+     "precision": 0.6666666666666666,
+     "prec_ci": [
+      0.4171354755711991,
+      0.8482367565633053
+     ],
+     "recall": 0.7692307692307693,
+     "rec_ci": [
+      0.49743623839480355,
+      0.918204713457304
+     ],
+     "f1": 0.7142857142857143,
+     "f1_ci": [
+      0.48,
+      0.8823529411764706
+     ],
+     "auc": 0.9175824175824175,
+     "auc_ci": [
+      0.8333333333333334,
+      0.9806763285024155
+     ],
+     "spec": 0.8809523809523809,
+     "npv": 0.925
+    },
+    "SVM": {
+     "TN": 32,
+     "FP": 10,
+     "FN": 1,
+     "TP": 12,
+     "accuracy": 0.8,
+     "acc_ci": [
+      0.6763512073441295,
+      0.884477851408011
+     ],
+     "precision": 0.5454545454545454,
+     "prec_ci": [
+      0.34659795182499575,
+      0.7307970593927182
+     ],
+     "recall": 0.9230769230769231,
+     "rec_ci": [
+      0.666860488286395,
+      0.986289578909774
+     ],
+     "f1": 0.6857142857142857,
+     "f1_ci": [
+      0.4782091097308489,
+      0.8421052631578947
+     ],
+     "auc": 0.9322344322344323,
+     "auc_ci": [
+      0.8466666666666667,
+      0.9883720930232558
+     ],
+     "spec": 0.7619047619047619,
+     "npv": 0.9696969696969697
+    },
+    "Neural Network": {
+     "TN": 33,
+     "FP": 9,
+     "FN": 1,
+     "TP": 12,
+     "accuracy": 0.8181818181818182,
+     "acc_ci": [
+      0.6966954025531731,
+      0.8981232961233396
+     ],
+     "precision": 0.5714285714285714,
+     "prec_ci": [
+      0.36546554224185784,
+      0.7553003119028359
+     ],
+     "recall": 0.9230769230769231,
+     "rec_ci": [
+      0.666860488286395,
+      0.986289578909774
+     ],
+     "f1": 0.7058823529411765,
+     "f1_ci": [
+      0.5,
+      0.8572829131652641
+     ],
+     "auc": 0.924908424908425,
+     "auc_ci": [
+      0.8326446280991735,
+      0.9888888888888889
+     ],
+     "spec": 0.7857142857142857,
+     "npv": 0.9705882352941176
+    }
+   }
+  },
+  "ptsd": {
+   "original": {
+    "selected": [
+     "PHQ8_1_NoInterest",
+     "PHQ8_2_Depressed",
+     "PHQ8_3_Sleep",
+     "PHQ8_4_Tired",
+     "PHQ8_5_Appetite",
+     "PHQ8_6_Failure",
+     "PHQ8_7_Concentration",
+     "PHQ8_8_Psychomotor",
+     "age",
+     "anhedonia",
+     "depressed_mood",
+     "somatic_symptoms",
+     "cognitive_symptoms",
+     "psychomotor",
+     "cognitive_to_somatic_ratio",
+     "symptom_variance"
+    ],
+    "rfecv_curve": [
+     0.6938168938168937,
+     0.6399905556092169,
+     0.6595804455092553,
+     0.6750738916256157,
+     0.6979617564489644,
+     0.6828010610079576,
+     0.689247947454844,
+     0.6776021220159152,
+     0.6918722860791826,
+     0.6672841845255639,
+     0.6796746242263485,
+     0.7032854756992688,
+     0.7384966247035212,
+     0.7090283917870124,
+     0.7371470113539079,
+     0.7457572312744727,
+     0.7319416164933406
+    ],
+    "Logistic Regression": {
+     "cv_f1": 0.8535588372337303,
+     "params": {
+      "solver": "saga",
+      "penalty": "l1",
+      "class_weight": "balanced",
+      "C": 11.288378916846883
+     }
+    },
+    "Random Forest": {
+     "cv_f1": 0.8848057076740481,
+     "params": {
+      "n_estimators": 50,
+      "min_samples_split": 10,
+      "min_samples_leaf": 1,
+      "max_depth": null,
+      "class_weight": null,
+      "bootstrap": false
+     }
+    },
+    "SVM": {
+     "cv_f1": 0.8527723830315053,
+     "params": {
+      "kernel": "linear",
+      "gamma": 0.03162277660168379,
+      "class_weight": "balanced",
+      "C": 0.004641588833612777
+     }
+    },
+    "Neural Network": {
+     "cv_f1": 0.8478853046594981,
+     "params": {
+      "solver": "sgd",
+      "learning_rate_init": 0.09999999999999999,
+      "learning_rate": "adaptive",
+      "hidden_layer_sizes": [
+       50,
+       25
+      ],
+      "early_stopping": true,
+      "alpha": 0.004641588833612777,
+      "activation": "tanh"
+     }
+    }
+   },
+   "corrected": {
+    "Logistic Regression": {
+     "cv_f1": 0.762748171368861,
+     "params": {
+      "solver": "saga",
+      "penalty": "l2",
+      "class_weight": "balanced",
+      "C": 0.033598182862837805
+     },
+     "selected": [
+      "PHQ8_1_NoInterest",
+      "PHQ8_2_Depressed",
+      "PHQ8_3_Sleep",
+      "PHQ8_4_Tired",
+      "PHQ8_5_Appetite",
+      "PHQ8_6_Failure",
+      "PHQ8_7_Concentration",
+      "PHQ8_8_Psychomotor",
+      "age",
+      "anhedonia",
+      "depressed_mood",
+      "somatic_symptoms",
+      "cognitive_symptoms",
+      "psychomotor",
+      "cognitive_to_somatic_ratio",
+      "symptom_variance"
+     ]
+    },
+    "Random Forest": {
+     "cv_f1": 0.7785903751420993,
+     "params": {
+      "n_estimators": 50,
+      "min_samples_split": 2,
+      "min_samples_leaf": 2,
+      "max_depth": null,
+      "class_weight": "balanced_subsample",
+      "bootstrap": false
+     },
+     "selected": [
+      "PHQ8_1_NoInterest",
+      "PHQ8_2_Depressed",
+      "PHQ8_3_Sleep",
+      "PHQ8_4_Tired",
+      "PHQ8_5_Appetite",
+      "PHQ8_6_Failure",
+      "PHQ8_7_Concentration",
+      "PHQ8_8_Psychomotor",
+      "age",
+      "anhedonia",
+      "depressed_mood",
+      "somatic_symptoms",
+      "cognitive_symptoms",
+      "psychomotor",
+      "cognitive_to_somatic_ratio",
+      "symptom_variance"
+     ]
+    },
+    "SVM": {
+     "cv_f1": 0.7774018071178315,
+     "params": {
+      "kernel": "linear",
+      "gamma": 0.001,
+      "class_weight": null,
+      "C": 0.09999999999999999
+     },
+     "selected": [
+      "PHQ8_1_NoInterest",
+      "PHQ8_2_Depressed",
+      "PHQ8_3_Sleep",
+      "PHQ8_4_Tired",
+      "PHQ8_5_Appetite",
+      "PHQ8_6_Failure",
+      "PHQ8_7_Concentration",
+      "PHQ8_8_Psychomotor",
+      "age",
+      "anhedonia",
+      "depressed_mood",
+      "somatic_symptoms",
+      "cognitive_symptoms",
+      "psychomotor",
+      "cognitive_to_somatic_ratio",
+      "symptom_variance"
+     ]
+    },
+    "Neural Network": {
+     "cv_f1": 0.761011301072153,
+     "params": {
+      "solver": "adam",
+      "learning_rate_init": 0.0031622776601683794,
+      "learning_rate": "adaptive",
+      "hidden_layer_sizes": [
+       100,
+       50,
+       25
+      ],
+      "early_stopping": true,
+      "alpha": 0.00021544346900318823,
+      "activation": "tanh"
+     },
+     "selected": [
+      "PHQ8_1_NoInterest",
+      "PHQ8_2_Depressed",
+      "PHQ8_3_Sleep",
+      "PHQ8_4_Tired",
+      "PHQ8_5_Appetite",
+      "PHQ8_6_Failure",
+      "PHQ8_7_Concentration",
+      "PHQ8_8_Psychomotor",
+      "age",
+      "anhedonia",
+      "depressed_mood",
+      "somatic_symptoms",
+      "cognitive_symptoms",
+      "psychomotor",
+      "cognitive_to_somatic_ratio",
+      "symptom_variance"
+     ]
+    }
+   },
+   "test_original": {
+    "Logistic Regression": {
+     "TN": 33,
+     "FP": 5,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.8727272727272727,
+     "acc_ci": [
+      0.7598297223798235,
+      0.9369578960698056
+     ],
+     "precision": 0.75,
+     "prec_ci": [
+      0.5312991206074114,
+      0.8881382993000237
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.8108108108108109,
+     "f1_ci": [
+      0.64,
+      0.9302325581395349
+     ],
+     "auc": 0.934984520123839,
+     "auc_ci": [
+      0.840327731092437,
+      0.9943977591036415
+     ],
+     "spec": 0.868421052631579,
+     "npv": 0.9428571428571428
+    },
+    "Random Forest": {
+     "TN": 37,
+     "FP": 1,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.9454545454545454,
+     "acc_ci": [
+      0.8514693935560297,
+      0.981276784591088
+     ],
+     "precision": 0.9375,
+     "prec_ci": [
+      0.716712622018518,
+      0.9888806553587528
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.9090909090909091,
+     "f1_ci": [
+      0.7777777777777778,
+      1.0
+     ],
+     "auc": 0.9388544891640866,
+     "auc_ci": [
+      0.8221143018018018,
+      1.0
+     ],
+     "spec": 0.9736842105263158,
+     "npv": 0.9487179487179487
+    },
+    "SVM": {
+     "TN": 31,
+     "FP": 7,
+     "FN": 1,
+     "TP": 16,
+     "accuracy": 0.8545454545454545,
+     "acc_ci": [
+      0.7383908696159521,
+      0.9244071089093046
+     ],
+     "precision": 0.6956521739130435,
+     "prec_ci": [
+      0.4913424357121644,
+      0.8439597563110678
+     ],
+     "recall": 0.9411764705882353,
+     "rec_ci": [
+      0.7301796914154303,
+      0.9895395991310502
+     ],
+     "f1": 0.8,
+     "f1_ci": [
+      0.6363636363636364,
+      0.92
+     ],
+     "auc": 0.9380804953560371,
+     "auc_ci": [
+      0.8357005494505495,
+      0.9972840541165587
+     ],
+     "spec": 0.8157894736842105,
+     "npv": 0.96875
+    },
+    "Neural Network": {
+     "TN": 32,
+     "FP": 6,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.8545454545454545,
+     "acc_ci": [
+      0.7383908696159521,
+      0.9244071089093046
+     ],
+     "precision": 0.7142857142857143,
+     "prec_ci": [
+      0.5004361911516968,
+      0.8618613712823846
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.7894736842105263,
+     "f1_ci": [
+      0.6153846153846154,
+      0.9166666666666666
+     ],
+     "auc": 0.93343653250774,
+     "auc_ci": [
+      0.84593837535014,
+      0.9916666666666667
+     ],
+     "spec": 0.8421052631578947,
+     "npv": 0.9411764705882353
+    }
+   },
+   "test_corrected": {
+    "Logistic Regression": {
+     "TN": 34,
+     "FP": 4,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.8909090909090909,
+     "acc_ci": [
+      0.7817445080840346,
+      0.9490327502899663
+     ],
+     "precision": 0.7894736842105263,
+     "prec_ci": [
+      0.5666572136911628,
+      0.9149232342638266
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.8333333333333334,
+     "f1_ci": [
+      0.6666666666666666,
+      0.9444444444444444
+     ],
+     "auc": 0.9427244582043343,
+     "auc_ci": [
+      0.8413458333333333,
+      1.0
+     ],
+     "spec": 0.8947368421052632,
+     "npv": 0.9444444444444444
+    },
+    "Random Forest": {
+     "TN": 36,
+     "FP": 2,
+     "FN": 1,
+     "TP": 16,
+     "accuracy": 0.9454545454545454,
+     "acc_ci": [
+      0.8514693935560297,
+      0.981276784591088
+     ],
+     "precision": 0.8888888888888888,
+     "prec_ci": [
+      0.6720023466389031,
+      0.9689804776352089
+     ],
+     "recall": 0.9411764705882353,
+     "rec_ci": [
+      0.7301796914154303,
+      0.9895395991310502
+     ],
+     "f1": 0.9142857142857143,
+     "f1_ci": [
+      0.7894736842105263,
+      1.0
+     ],
+     "auc": 0.9543343653250773,
+     "auc_ci": [
+      0.85,
+      1.0
+     ],
+     "spec": 0.9473684210526315,
+     "npv": 0.972972972972973
+    },
+    "SVM": {
+     "TN": 35,
+     "FP": 3,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.9090909090909091,
+     "acc_ci": [
+      0.8042250531228354,
+      0.9605418451755379
+     ],
+     "precision": 0.8333333333333334,
+     "prec_ci": [
+      0.6077796169796655,
+      0.9416342323981449
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.8571428571428571,
+     "f1_ci": [
+      0.7058823529411765,
+      0.967741935483871
+     ],
+     "auc": 0.9427244582043344,
+     "auc_ci": [
+      0.8449378238631288,
+      1.0
+     ],
+     "spec": 0.9210526315789473,
+     "npv": 0.9459459459459459
+    },
+    "Neural Network": {
+     "TN": 36,
+     "FP": 2,
+     "FN": 2,
+     "TP": 15,
+     "accuracy": 0.9272727272727272,
+     "acc_ci": [
+      0.8274005982567241,
+      0.9713559399660212
+     ],
+     "precision": 0.8823529411764706,
+     "prec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "recall": 0.8823529411764706,
+     "rec_ci": [
+      0.6566364919396065,
+      0.9671202265340099
+     ],
+     "f1": 0.8823529411764706,
+     "f1_ci": [
+      0.7368421052631579,
+      0.975609756097561
+     ],
+     "auc": 0.9473684210526315,
+     "auc_ci": [
+      0.8468979153572176,
+      1.0
+     ],
+     "spec": 0.9473684210526315,
+     "npv": 0.9473684210526315
+    }
+   }
+  }
+ },
+ "mcnemar": {
+  "depression": {
+   "Logistic Regression": [
+    3,
+    2,
+    1.0
+   ],
+   "SVM": [
+    10,
+    5,
+    0.30175781249999994
+   ],
+   "Neural Network": [
+    6,
+    1,
+    0.125
+   ]
+  },
+  "ptsd": {
+   "Logistic Regression": [
+    4,
+    0,
+    0.125
+   ],
+   "SVM": [
+    6,
+    1,
+    0.125
+   ],
+   "Neural Network": [
+    5,
+    0,
+    0.0625
+   ]
+  }
+ },
+ "repeated_cv_summary": {
+  "depression": {
+   "('f1', 'mean')": {
+    "Logistic Regression": 0.7145,
+    "Neural Network": 0.7087,
+    "Random Forest": 0.7064,
+    "SVM": 0.7111
+   },
+   "('f1', 'std')": {
+    "Logistic Regression": 0.0569,
+    "Neural Network": 0.0684,
+    "Random Forest": 0.055,
+    "SVM": 0.0425
+   },
+   "('recall', 'mean')": {
+    "Logistic Regression": 0.8851,
+    "Neural Network": 0.8607,
+    "Random Forest": 0.7479,
+    "SVM": 0.909
+   },
+   "('recall', 'std')": {
+    "Logistic Regression": 0.082,
+    "Neural Network": 0.1026,
+    "Random Forest": 0.0853,
+    "SVM": 0.0696
+   },
+   "('precision', 'mean')": {
+    "Logistic Regression": 0.6038,
+    "Neural Network": 0.6082,
+    "Random Forest": 0.6804,
+    "SVM": 0.588
+   },
+   "('precision', 'std')": {
+    "Logistic Regression": 0.0715,
+    "Neural Network": 0.0785,
+    "Random Forest": 0.0867,
+    "SVM": 0.0585
+   },
+   "('auc', 'mean')": {
+    "Logistic Regression": 0.9337,
+    "Neural Network": 0.9203,
+    "Random Forest": 0.9289,
+    "SVM": 0.9329
+   },
+   "('auc', 'std')": {
+    "Logistic Regression": 0.0287,
+    "Neural Network": 0.0279,
+    "Random Forest": 0.0261,
+    "SVM": 0.0268
+   }
+  },
+  "ptsd": {
+   "('f1', 'mean')": {
+    "Logistic Regression": 0.7851,
+    "Neural Network": 0.7792,
+    "Random Forest": 0.7655,
+    "SVM": 0.7631
+   },
+   "('f1', 'std')": {
+    "Logistic Regression": 0.0649,
+    "Neural Network": 0.06,
+    "Random Forest": 0.0717,
+    "SVM": 0.0696
+   },
+   "('recall', 'mean')": {
+    "Logistic Regression": 0.8659,
+    "Neural Network": 0.8641,
+    "Random Forest": 0.7999,
+    "SVM": 0.8571
+   },
+   "('recall', 'std')": {
+    "Logistic Regression": 0.0786,
+    "Neural Network": 0.0798,
+    "Random Forest": 0.09,
+    "SVM": 0.082
+   },
+   "('precision', 'mean')": {
+    "Logistic Regression": 0.7229,
+    "Neural Network": 0.7152,
+    "Random Forest": 0.7406,
+    "SVM": 0.6936
+   },
+   "('precision', 'std')": {
+    "Logistic Regression": 0.0811,
+    "Neural Network": 0.0757,
+    "Random Forest": 0.0832,
+    "SVM": 0.0875
+   },
+   "('auc', 'mean')": {
+    "Logistic Regression": 0.9206,
+    "Neural Network": 0.9227,
+    "Random Forest": 0.915,
+    "SVM": 0.91
+   },
+   "('auc', 'std')": {
+    "Logistic Regression": 0.0341,
+    "Neural Network": 0.0336,
+    "Random Forest": 0.0391,
+    "SVM": 0.0479
+   }
+  }
+ }
+}

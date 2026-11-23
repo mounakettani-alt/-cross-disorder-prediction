@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Cross-Disorder Prediction of Depression and PTSD Using Machine Learning: A Comparative Study with Statistical Robustness Analysis"
+authors:
+  - family-names: Kettani
+    given-names: Mouna
+    affiliation: "Al Akhawayn University in Ifrane"
+  - family-names: Samine
+    given-names: Salma
+    affiliation: "Al Akhawayn University in Ifrane"
+  - family-names: Abbou
+    given-names: Fouad
+    affiliation: "Al Akhawayn University in Ifrane"
+license: MIT
+type: software

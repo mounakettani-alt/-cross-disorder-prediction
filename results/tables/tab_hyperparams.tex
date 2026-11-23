@@ -1,0 +1,11 @@
+\multicolumn{4}{@{}l}{\textit{Depression from PCL-C items}}\\
+LR & C = 1438, class\_weight = balanced, penalty = l2, solver = liblinear & 0.894 & 0.745 \\
+RF & bootstrap = False, class\_weight = None, max\_depth = None, min\_samples\_leaf = 1, min\_samples\_split = 10, n\_estimators = 50 & 0.913 & 0.746 \\
+SVM & C = 1000, class\_weight = balanced, gamma = 1, kernel = rbf & 0.954 & 0.748 \\
+MLP & activation = relu, alpha = 0.004642, early\_stopping = True, hidden\_layer\_sizes = (100, 50), learning\_rate = constant, learning\_rate\_init = 0.01778, solver = adam & 0.898 & 0.758 \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{PTSD from PHQ-8 items}}\\
+LR & C = 11.29, class\_weight = balanced, penalty = l1, solver = saga & 0.854 & 0.763 \\
+RF & bootstrap = False, class\_weight = None, max\_depth = None, min\_samples\_leaf = 1, min\_samples\_split = 10, n\_estimators = 50 & 0.885 & 0.779 \\
+SVM & C = 0.004642, class\_weight = balanced, gamma = 0.03162, kernel = linear & 0.853 & 0.777 \\
+MLP & activation = tanh, alpha = 0.004642, early\_stopping = True, hidden\_layer\_sizes = (50, 25), learning\_rate = adaptive, learning\_rate\_init = 0.1, solver = sgd & 0.848 & 0.761 \\

@@ -1,0 +1,34 @@
+Loaded 275 rows x 33 columns
+Missing values in dataset: 0
+
+=== DEPRESSION ===
+train 220 (pos 0.241), test 55 (pos 13)
+  original protocol (reproduction) ...
+  RFECV selected 14: ['PCL-C_1_Memories', 'PCL-C_4_Upset', 'PCL-C_9_NoInterest', 'PCL-C_10_FeelDistant', 'PCL-C_13_Sleep', 'PCL-C_15_Concentration', 'age', 're_experiencing', 'avoidance', 'cognition_mood', 'arousal_reactivity', 'mood_to_arousal_ratio', 'symptom_variance', 'total_pclc_score']
+  corrected protocol (SMOTE + RFECV inside folds) ...
+  reproduction check against the paper (original protocol):
+    Logistic Regression  CV 0.8935 (paper 0.8935)  test F1 0.7586 (paper 0.7586)  OK
+    Random Forest        CV 0.9131 (paper 0.9131)  test F1 0.8000 (paper 0.8000)  OK
+    SVM                  CV 0.9543 (paper 0.9543)  test F1 0.4211 (paper 0.4211)  OK
+    Neural Network       CV 0.8975 (paper 0.8975)  test F1 0.6452 (paper 0.6452)  OK
+  CV F1 original -> corrected:  LR 0.894->0.745, RF 0.913->0.746, SVM 0.954->0.748, MLP 0.898->0.758
+  repeated stratified CV (5x5), corrected pipeline ...
+  overlap ablation (Random Forest) ...
+  elapsed 1s
+
+=== PTSD ===
+train 220 (pos 0.318), test 55 (pos 17)
+  original protocol (reproduction) ...
+  RFECV selected 16: ['PHQ8_1_NoInterest', 'PHQ8_2_Depressed', 'PHQ8_3_Sleep', 'PHQ8_4_Tired', 'PHQ8_5_Appetite', 'PHQ8_6_Failure', 'PHQ8_7_Concentration', 'PHQ8_8_Psychomotor', 'age', 'anhedonia', 'depressed_mood', 'somatic_symptoms', 'cognitive_symptoms', 'psychomotor', 'cognitive_to_somatic_ratio', 'symptom_variance']
+  corrected protocol (SMOTE + RFECV inside folds) ...
+  reproduction check against the paper (original protocol):
+    Logistic Regression  CV 0.8536 (paper 0.8536)  test F1 0.8108 (paper 0.8108)  OK
+    Random Forest        CV 0.8848 (paper 0.8848)  test F1 0.9091 (paper 0.9091)  OK
+    SVM                  CV 0.8528 (paper 0.8528)  test F1 0.8000 (paper 0.8000)  OK
+    Neural Network       CV 0.8479 (paper 0.8479)  test F1 0.7895 (paper 0.7895)  OK
+  CV F1 original -> corrected:  LR 0.854->0.763, RF 0.885->0.779, SVM 0.853->0.777, MLP 0.848->0.761
+  repeated stratified CV (5x5), corrected pipeline ...
+  overlap ablation (Random Forest) ...
+  elapsed 40s
+
+Done in 46s. Figures -> out152/figures, tables -> out152/tables

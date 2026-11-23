@@ -1,0 +1,10 @@
+# Exact versions used to produce every number in the paper (Python 3.12).
+# The Random Forest configuration selected by the leakage-free search depends on the
+# scikit-learn version (two candidates differ by 0.0014 in CV F1; see Sect. 3.1), so
+# other versions can give slightly different leakage-free results.
+scikit-learn==1.5.2
+imbalanced-learn==0.12.4
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+matplotlib==3.9.2
